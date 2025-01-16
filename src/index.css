@@ -21,6 +21,7 @@ section h1{
 
 .buttons-container{
    margin: 30px;
+   display: flex;
 }
 
 .buttons-container button{

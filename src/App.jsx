@@ -3,9 +3,29 @@ import languages from "./assets/languages.js"
 
 
 function App() {
+
   return (
     <section>
       <h1>Learn Web Development</h1>
+      <div className="buttons-container">
+        {languages.map(language => (
+          <div key={language.id}>
+              <button>{language.title}</button>
+          </div>
+        ))}
+      </div>
+      <div className="response-container">
+        <span>nome ling.</span>
+        <p>testo del linguaggio</p>
+      </div>
+    </section>
+  )
+}
+
+export default App;
+
+
+/* <h1>Learn Web Development</h1>
       <div className="buttons-container">
         <button>Linguaggio 1</button>
         <button>Linguaggio 2</button>
@@ -14,9 +34,4 @@ function App() {
       <div className="response-container">
         <span>Nome del linguaggio</span>
         <p>Descrizione del linguaggio</p>
-      </div>
-    </section>
-  )
-}
-
-export default App;
+      </div> */
