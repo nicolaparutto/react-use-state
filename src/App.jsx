@@ -5,7 +5,7 @@ function App() {
 
   const [langSelected, setLangSelected] = useState(null);
   const [title, setTitle] = useState("");
-  const [description, setDescription] = useState("");
+  const [description, setDescription] = useState("Nessun linguaggio selezionato");
 
   function descUpdater(id) {
     const language = languages.find(language => language.id === id);
@@ -21,7 +21,7 @@ function App() {
         {languages.map(language => (
               <button 
               key={language.id} 
-              className="btn" 
+              className={language.id === langSelected ? "btn-active" : "btn"} 
               onClick={() => descUpdater(language.id)}
               >
               {language.title}
