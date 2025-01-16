@@ -1,22 +1,36 @@
 import languages from "./assets/languages.js"
-
-
+import {useState} from "react";
 
 function App() {
+
+  const [langSelected, setLangSelected] = useState(null);
+  const [title, setTitle] = useState("");
+  const [description, setDescription] = useState("");
+
+  function descUpdater(id) {
+    const language = languages.find(language => language.id === id);
+    setLangSelected(language.id);
+    setTitle(language.title);
+    setDescription(language.description);
+  }
 
   return (
     <section>
       <h1>Learn Web Development</h1>
       <div className="buttons-container">
         {languages.map(language => (
-          <div key={language.id}>
-              <button>{language.title}</button>
-          </div>
+              <button 
+              key={language.id} 
+              className="btn" 
+              onClick={() => descUpdater(language.id)}
+              >
+              {language.title}
+              </button>
         ))}
       </div>
       <div className="response-container">
-        <span>nome ling.</span>
-        <p>testo del linguaggio</p>
+        <span>{title}</span>
+        <p>{description}</p>
       </div>
     </section>
   )
@@ -25,13 +39,3 @@ function App() {
 export default App;
 
 
-/* <h1>Learn Web Development</h1>
-      <div className="buttons-container">
-        <button>Linguaggio 1</button>
-        <button>Linguaggio 2</button>
-        <button>Linguaggio 3</button>
-      </div>
-      <div className="response-container">
-        <span>Nome del linguaggio</span>
-        <p>Descrizione del linguaggio</p>
-      </div> */
