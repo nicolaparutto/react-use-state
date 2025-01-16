@@ -12,7 +12,7 @@ function App() {
         <button>Linguaggio 3</button>
       </div>
       <div className="response-container">
-        <h2>Nome del linguaggio</h2>
+        <span>Nome del linguaggio</span>
         <p>Descrizione del linguaggio</p>
       </div>
     </section>

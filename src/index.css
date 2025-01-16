@@ -1,0 +1,52 @@
+/*css default*/
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body{
+   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+section{
+   margin: 100px;
+}
+
+section h1{
+   background-color: #F8F9FA;
+   padding: 20px 15px;
+   font-size: 2.5rem;
+}
+
+.buttons-container{
+   margin: 30px;
+}
+
+.buttons-container button{
+   margin-right: 30px;
+   padding: 10px 20px;
+   border: none;
+   border-radius: 10px;
+   background: #0D6EFD;
+   color: #fff;
+   font-size: 1.1rem;
+   cursor: pointer;
+}
+
+.response-container{
+   border: 1px solid #D2D2D2;
+   padding: 20px ;
+   border-radius: 10px;
+}
+
+.response-container span{
+   text-transform: uppercase;
+   font-size: 1.4rem;
+   font-weight: 600;
+}
+
+.response-container p{
+   color: #212429;
+   font-size: 1.1rem;
+}
